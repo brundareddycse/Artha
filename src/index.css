@@ -1,0 +1,88 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── DARK THEME (default) ── */
+:root {
+  --bg-0: #0a0a0c;
+  --bg-1: #111114;
+  --bg-2: #18181c;
+  --bg-3: #202025;
+  --bg-4: #28282e;
+  --border: #2c2c34;
+  --border-soft: #1e1e24;
+  --amber: #d4933a;
+  --amber-light: #e8b060;
+  --amber-dim: rgba(212,147,58,0.12);
+  --amber-glow: rgba(212,147,58,0.05);
+  --teal: #2a9080;
+  --teal-light: #3ab8a5;
+  --teal-dim: rgba(42,144,128,0.12);
+  --red: #c0392b;
+  --red-dim: rgba(192,57,43,0.12);
+  --green: #27ae60;
+  --green-dim: rgba(39,174,96,0.12);
+  --text-0: #f0ede8;
+  --text-1: #c8c4bc;
+  --text-2: #8a8680;
+  --text-3: #505050;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.2);
+  --shadow-lg: 0 2px 8px rgba(0,0,0,0.5), 0 16px 48px rgba(0,0,0,0.3);
+  --nav-bg: rgba(10,10,12,0.88);
+}
+
+/* ── LIGHT THEME ── */
+[data-theme="light"] {
+  --bg-0: #f7f5f0;
+  --bg-1: #ffffff;
+  --bg-2: #f0ede6;
+  --bg-3: #e8e4dc;
+  --bg-4: #ddd9d0;
+  --border: #d0ccc4;
+  --border-soft: #e4e0d8;
+  --amber: #b8760a;
+  --amber-light: #c8860f;
+  --amber-dim: rgba(184,118,10,0.1);
+  --amber-glow: rgba(184,118,10,0.04);
+  --teal: #1e7a6a;
+  --teal-light: #2a9a88;
+  --teal-dim: rgba(30,122,106,0.1);
+  --red: #c0392b;
+  --red-dim: rgba(192,57,43,0.08);
+  --green: #1e8a4a;
+  --green-dim: rgba(30,138,74,0.1);
+  --text-0: #1a1814;
+  --text-1: #3a3630;
+  --text-2: #6a6460;
+  --text-3: #9a9590;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+  --shadow-lg: 0 2px 8px rgba(0,0,0,0.1), 0 16px 48px rgba(0,0,0,0.08);
+  --nav-bg: rgba(247,245,240,0.92);
+}
+
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body { background: var(--bg-0); color: var(--text-0); font-family: var(--font-body); font-weight: 400; line-height: 1.6; min-height: 100vh; transition: background 0.3s, color 0.3s; }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+::selection { background: rgba(212,147,58,0.2); color: var(--amber-light); }
+h1,h2,h3,h4,h5 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: var(--font-body); }
+input, textarea, select { font-family: var(--font-body); background: var(--bg-3); border: 1px solid var(--border); color: var(--text-0); border-radius: var(--radius); outline: none; transition: border-color 0.15s, box-shadow 0.15s; }
+input:focus, textarea:focus, select:focus { border-color: var(--amber); box-shadow: 0 0 0 3px rgba(212,147,58,0.1); }
+
+@keyframes fadeIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+@keyframes scaleIn { from { opacity:0; transform:scale(0.96); } to { opacity:1; transform:scale(1); } }
+@keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+@keyframes spin { to { transform:rotate(360deg); } }
+@keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+@keyframes shimmer { 0%{background-position:-200% center;} 100%{background-position:200% center;} }
+.animate-fade { animation: fadeIn 0.4s ease forwards; }
+.animate-scale { animation: scaleIn 0.3s ease forwards; }
+.sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
