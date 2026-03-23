@@ -6,15 +6,6 @@ AI-powered financial co-pilot for India. Built for ET AI Hackathon 2026.
 - `index.html` — The complete app (React, all pages, everything bundled)
 - `404.html` — Fixes page refresh on GitHub Pages
 
-## Before deploying
-
-Open `index.html` in VS Code, press **Ctrl+H** and replace:
-
-```
-PASTE_YOUR_KEY_HERE
-```
-
-with your Gemini API key from aistudio.google.com (starts with AIzaSy...)
 
 ## Deploy to GitHub Pages
 
@@ -56,4 +47,4 @@ git push -u origin main
 
 Then go to repo Settings → Pages → Deploy from branch → main → Save.
 
-Live at: `https://YOUR_USERNAME.github.io/artha`
+
